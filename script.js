@@ -1,3 +1,4 @@
+
 alert("Welkom bij mijn text adventure 'The Woods'");
 document.write ("<b>Jouw keuze's: <br>");
 
@@ -13,6 +14,7 @@ var begin = prompt("Je word wakker op een vreemde plek. Je ziet een pad naar een
 			if (outOfHouse == "rechts") {
 				document.write ("Rechts")
 				var right = prompt("Je gaat naar rechts en ziet daar een wizard staan. Je loopt naar hem toe en hij zegt 'Kies een nummer tussen 1-10. Als het nummer hoger is dan mijn nummer kan je verder' Kies een nummer tussen 1 en 10:");
+			
 			} else if (outOfHouse == "links") {
 				document.write("Links")
 				var left = prompt("Je gaat naar links en ziet daar een tas liggen. In de tas zit een groen drankje. Wil je het drankje op drinken? Ja of Nee?")
