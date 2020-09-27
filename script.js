@@ -1,10 +1,13 @@
-
+//<!-- Kaylee van der Meijden
+//Software Developer -->
 alert("Welkom bij mijn text adventure 'The Woods'");
 document.write ("<b>Jouw keuze's: <br>");
 var strength = 0;
+//Ik heb hier een var aangemaakt met strength en bij een aantal keuzes kan je strength verzamelen om sterker te worden.
 
 var begin = prompt("Je word wakker op een vreemde plek. Je ziet een pad naar een huisje en een pad naar het bos. Wat kies je? Huisje of Bos");
 begin = begin.toLowerCase();
+//Met toLowerCase() zorg je ervoor dat alles wat iemand in typt word omgezet naar kleine letters.
 document.write(begin + "<br>");
 	if (begin == "huisje") {
 		var house = prompt("Je loopt naar het huisje en doet de deur open. In het huisje zie je een zwaard en een schild aan de muur. Welke kies je om mee te nemen? Keuze uit: Zwaard of Schild.");
@@ -13,6 +16,7 @@ document.write(begin + "<br>");
 		
 		if (house == "zwaard") {
 			strength += 1;
+			//Hier krijg je + 1 strength
 			var fight = prompt("Je neemt het zwaard mee. Je loopt het bos in en komt een monster tegen. Wil je vechten met het monster? Ja of Nee?");
 			fight = fight.toLowerCase();
 			document.write(fight + "<br>");
@@ -35,16 +39,20 @@ document.write(begin + "<br>");
 				document.write(wizard + "<br>")
 				
 				wizard = parseInt(wizard);
+				//Met parseInt zorg je ervoor dat hij wizard ziet als cijfers en niet als een woord. Dus dat 80 cijfers zijn.
 				if (wizard == 80) {
+					//Hier staat gelijk aan 80.
 					alert("'Wow, dat is precies mijn leeftijd. Hier is je verassing.' De wizard spreekt een spreuk uit. Je voelt je sterker. ");
 						strength += 1;
 
 
 				} else if (wizard < 80) {
+					//Hier staat lager dan 80.
 					alert("'Wow wat aardig, ik ben wel wat ouder maar omdat je zo aardig bent geef ik je alsnog de verassing.' De wizard spreekt een spreuk uit. Je voelt je sterker.");
 					strength += 1;
 
 				} else if(wizard > 80){
+					//Hier staat hoger dan 80.
 					alert("'Zie ik er zo oud uit?!' De wizard vind het niet leuk en hij loopt weg.");
 					
 				}
@@ -74,7 +82,9 @@ document.write(begin + "<br>");
 						document.write(spider + "<br>");
 						if (spider == "vechten") {
 							if (strength >= 2) {
+								//Hier staat dat wanneer je niet groter ben of gelijk aan 2 dat je de spin niet kan verslaan.
 								strength += 1;
+								//Als je de spin wel verslaat krijg je + 1 strength.
 								alert("Je verslaat de spin en loopt verder uit het bos. Je komt op een groot leeg veld. Je ziet ineens een grote schaduw op de grond. Je begint om je heen te kijken en ziet een grote rode draak landen.");
 								var treasure = prompt("'Dit is mijn eiland, jij hoort hier niet.' De draak valt je aan. Naast je zie je een kist. In de kist zit een schild en een pijl en boog. Je kan er 1 kiezen. Welke pak je het Schild of de Boog?");
 								treasure = treasure.toLowerCase();
